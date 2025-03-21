@@ -25,6 +25,11 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Run Helper Script
+        run: |
+          cd helper_scripts
+          python3 replace_placeholders.py
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2
 
